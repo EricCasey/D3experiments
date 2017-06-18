@@ -1,5 +1,5 @@
 {
-  "name": "lookup-client",
+  "name": "demo-client",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "babel-plugin-transform-class-properties": "6.22.0",
-    "react": "15.4.0",
-    "react-dom": "15.4.0",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-scripts": "^0.8.5",
     "semantic-ui": "2.2.7"
   },
   "scripts": {

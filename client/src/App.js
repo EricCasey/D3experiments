@@ -1,38 +1,34 @@
 import React, { Component } from 'react';
-import SelectedFoods from './SelectedFoods';
-import FoodSearch from './FoodSearch';
+import { Container, Header } from 'semantic-ui-react'
+import Filters from './Filters';
+import Chart from './Chart';
+//import Client from './Client';
+
 
 class App extends Component {
-  state = {
-    selectedFoods: [],
+  constructor(props) {
+      super(props);
+      this.state = {
+          dataSet: [],
+          query: ''
+      };
   }
 
-  removeFoodItem = (itemIndex) => {
-    const filteredFoods = this.state.selectedFoods.filter(
-      (item, idx) => itemIndex !== idx,
-    );
-    this.setState({ selectedFoods: filteredFoods });
-  }
+  citySearch = (itemIndex) => {
 
-  addFood = (food) => {
-    const newFoods = this.state.selectedFoods.concat(food);
-    this.setState({ selectedFoods: newFoods });
   }
 
   render() {
-    const { selectedFoods } = this.state;
 
     return (
       <div className='App'>
-        <div className='ui text container'>
-          <SelectedFoods
-            foods={selectedFoods}
-            onFoodClick={this.removeFoodItem}
-          />
-          <FoodSearch
-            onFoodClick={this.addFood}
-          />
-        </div>
+        <Container text>
+          <Header as='h2'>D3js in React</Header>
+          <Filters />
+        </Container>
+        <Container text>
+          <Chart />
+        </Container>
       </div>
     );
   }

@@ -8,6 +8,10 @@ body {
   margin-top: 7em;
 }
 
-#food-search {
-  margin-top: 5em;
+#chart {
+  width: 80%;
+  margin: 20px auto;
+  border: 3px solid black;
+  border-radius: 6px;
+  min-height: 70%;
 }
